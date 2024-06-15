@@ -1,11 +1,15 @@
-import { StyleSheet, Text, View,TextInput,TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View,TextInput,TouchableOpacity, ScrollView} from 'react-native';
 
 export default function Details({navigation}:any) {
   return (
     <View style={styles.container}>
-            <TouchableOpacity style={styles.containerFormularioGeralBotao} onPress={()=>navigation.navigate("home")}>
+    <ScrollView>
+      <View >
+            <TouchableOpacity style={styles.containerFormularioGeralBotao} onPress={()=>navigation.navigate("Home")}>
             <Text style={{color:"#ffffff"}}>Ir para pagina Home</Text>
           </TouchableOpacity>
+      </View>
+    </ScrollView>
     </View>
   );
 }
@@ -20,6 +24,7 @@ const styles = StyleSheet.create({
     alignItems:"center",
   },
   containerFormularioGeralBotao:{
+    
     width:300,
     height:50,
     borderWidth:2,
