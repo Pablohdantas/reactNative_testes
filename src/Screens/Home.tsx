@@ -1,13 +1,13 @@
-import { StyleSheet, Text, View,TextInput,TouchableOpacity, ScrollView} from 'react-native';
-
+import { StyleSheet, Text, View,TextInput,SafeAreaView, ScrollView} from 'react-native';
+import Header from '../../components/Header';
 export default function Home() {
   return (
-    <View style={styles.container}>
-    <ScrollView style ={{width:"90%"}} >
-     
-      <Text style={{color:"#ffffff"}}>Aqui é a pagina Home</Text>
+    <SafeAreaView  style={styles.container}> 
+      <Header/>
+      <ScrollView >
     </ScrollView>
-    </View>
+  
+    </SafeAreaView>
   );
 }
 
@@ -16,6 +16,8 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:"#000000",
     borderWidth:2,
+    borderTopWidth:0,
+    borderBottomWidth:0,
     borderColor:"#ffffff",
     justifyContent:"center",
     alignItems:"center",

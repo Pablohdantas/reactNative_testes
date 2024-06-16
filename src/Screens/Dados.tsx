@@ -1,16 +1,17 @@
-import { StyleSheet, Text, View,TextInput,TouchableOpacity, ScrollView} from 'react-native';
+import { StyleSheet, Text, View,TextInput,TouchableOpacity, ScrollView, SafeAreaView} from 'react-native';
+import Header from '../../components/Header';
 
-export default function Details({navigation}:any) {
+
+export default function Dados() {
   return (
-    <View style={styles.container}>
-    <ScrollView>
-      <View >
-            <TouchableOpacity style={styles.containerFormularioGeralBotao} onPress={()=>navigation.navigate("Home")}>
-            <Text style={{color:"#ffffff"}}>Ir para pagina Home</Text>
-          </TouchableOpacity>
-      </View>
-    </ScrollView>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Header/>
+      <ScrollView>
+        <View >
+           
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
@@ -19,18 +20,11 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:"#000000",
     borderWidth:2,
+    borderTopWidth:0,
+    borderBottomWidth:0,
     borderColor:"#ffffff",
     justifyContent:"center",
     alignItems:"center",
   },
-  containerFormularioGeralBotao:{
-    
-    width:300,
-    height:50,
-    borderWidth:2,
-    borderColor:"#ffffff",
-    marginBottom:30,
-    justifyContent:"center",
-    alignItems:"center",
-  },
+ 
 });
