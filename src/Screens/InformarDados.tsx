@@ -2,6 +2,8 @@ import { StyleSheet, Text, View,TextInput,TouchableOpacity, SafeAreaView} from '
 import { useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../components/Header';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 
 export default function InformarDados() {

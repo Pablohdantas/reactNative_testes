@@ -5,12 +5,16 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialIcons } from '@expo/vector-icons';
+import { StatusBar } from "react-native";
 
 
 const BottomTab = createBottomTabNavigator();
 
 export default function App() {
   return (
+    <>
+    <StatusBar hidden/>
+
     <NavigationContainer>
       <BottomTab.Navigator 
 
@@ -58,6 +62,7 @@ export default function App() {
         }}/>
       </BottomTab.Navigator>
     </NavigationContainer>
+    </>
   );
 }
 
